@@ -4,9 +4,6 @@
   "description": "[![Actions Status](https://github.com/MaloVer1471/frontend-project-44/workflows/hexlet-check/badge.svg)](https://github.com/MaloVer1471/frontend-project-44/actions)",
   "main": "index.js",
   "type": "module",
-  "bin": {
-    "code": "bin/brain-games.js"
-  },
   "dependencies": {
     "readline-sync": "^1.4.10"
   },
