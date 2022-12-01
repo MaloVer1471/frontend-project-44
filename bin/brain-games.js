@@ -2,5 +2,5 @@
 
 import userName from '../scr/sli.js';
 
-console.log('Welcome to the Brain Games!')
-userName()
+console.log('Welcome to the Brain Games!');
+userName();
