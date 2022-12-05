@@ -9,7 +9,7 @@ const gameBase = (gameNote, quest) => {
   console.log(gameNote);
 
   for (let i = 0; i < 3; i += 1) {
-    const questionAndResult = (quest);
+    const questionAndResult = quest();
 
     console.log(`Question: ${questionAndResult[0]}`);
     const userAnswer = readlineSync.question('Your answer: ');
