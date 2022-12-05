@@ -15,3 +15,6 @@ lint:
 
 test:
 	npm test
+
+brain-calc:
+	node bin/brain-calc.js
