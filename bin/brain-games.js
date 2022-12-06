@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import userName from '../scr/sli.js';
+import userName from '../src/sli.js';
 
 console.log('Welcome to the Brain Games!');
 userName();
