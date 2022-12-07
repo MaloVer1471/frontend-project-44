@@ -11,17 +11,17 @@ const gcd = () => {
     const quest = `${num1} ${num2}`;
 
     const gcdGet = (numb1, numb2) => {
-        let number1 = numb1;
-        let number2 = numb2;
-        while (number1 !== 0 && number2 !== 0) {
-          if (number1 > number2) {
-            number1 %= number2;
-          } else {
-            number2 %= number1;
-          }
+      let number1 = numb1;
+      let number2 = numb2;
+      while (number1 !== 0 && number2 !== 0) {
+        if (number1 > number2) {
+          number1 %= number2;
+        } else {
+          number2 %= number1;
         }
-        return (number1 + number2);
-      };
+      }
+      return (number1 + number2);
+    };
 
     const result = gcdGet(num1, num2).toString();
 
