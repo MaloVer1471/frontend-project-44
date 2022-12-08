@@ -1,11 +1,11 @@
 import gameBase from '../gameComparison.js';
-import randomN from '../randomNumb.js';
+import randomNumb from '../randomNumb.js';
 
 const evenGame = () => {
-  const gameNote = "Answer 'yes' if the number is even, otherwise answer 'no'.";
+  const gameNote = 'Answer "yes" if the number is even, otherwise answer "no".';
 
   const evenQuest = () => {
-    const numb = randomN(100);
+    const numb = randomNumb(100);
 
     const checkEven = (num) => num % 2 === 0;
 
