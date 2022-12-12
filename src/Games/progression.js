@@ -7,19 +7,15 @@ const progressGame = () => {
   const progrTask = () => {
     const sequence = [];
     const lastInd = 9;
-
     const stepGet = () => {
       const necessaryStep = randomNumb(7);
-
       return (necessaryStep === 0 ? stepGet() : necessaryStep);
     };
     const step = stepGet();
-
     const firstNumb = () => {
       const numb = randomNumb(100);
       const numLimit = numb + (step * lastInd);
       if (numLimit > 100) { return firstNumb(); }
-
       return numb;
     };
     const startNumb = firstNumb();
@@ -31,7 +27,6 @@ const progressGame = () => {
     const replaceNum = sequence[indexRand];
     let result = replaceNum;
     sequence[indexRand] = '..';
-
     const quest = sequence.join(' ');
 
     result = result.toString();
