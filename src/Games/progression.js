@@ -36,7 +36,7 @@ const progressGame = () => {
 
     result = result.toString();
 
-    return [quest, result];
+    return ([quest, result]);
   };
   gameBase(progressNote, progrTask);
 };

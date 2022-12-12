@@ -21,7 +21,7 @@ const prime = () => {
 
     const result = (primeNum(numb) ? 'yes' : 'no');
 
-    return [quest, result];
+    return ([quest, result]);
   };
   gameBase(primeNote, primeTask);
 };

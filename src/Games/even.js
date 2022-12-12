@@ -13,7 +13,7 @@ const evenGame = () => {
 
     const result = (checkEven(numb) ? 'yes' : 'no');
 
-    return [questionNumb, result];
+    return ([questionNumb, result]);
   };
 
   gameBase(gameNote, evenQuest);

@@ -10,22 +10,18 @@ const gcd = () => {
 
     const quest = `${num1} ${num2}`;
 
-    const gcdGet = (numb1, numb2) => {
-      let number1 = numb1;
-      let number2 = numb2;
-      while (number1 !== 0 && number2 !== 0) {
-        if (number1 > number2) {
-          number1 %= number2;
-        } else {
-          number2 %= number1;
-        }
+    const getGcd = (numb1, numb2) => {
+      if (numb2 === 0) {
+        return numb1;
       }
-      return (number1 + number2);
+      return getGcd(numb2, numb1 % numb2);
     };
 
-    const result = gcdGet(num1, num2).toString();
+    let result = getGcd(num1, num2);
 
-    return [quest, result];
+    result = String(result);
+
+    return ([quest, result]);
   };
 
   gameBase(gcdNote, gcdTask);
