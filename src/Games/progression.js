@@ -3,31 +3,22 @@ import gameBase from '../gameComparison.js';
 
 const progressGame = () => {
   const progressNote = 'What number is missing in the progression?';
-  const progrTask = () => {
-    const sequence = [];
-    const lastInd = 9;
-    const stepGet = () => {
-      const necessaryStep = randomNumb(7);
-      return (necessaryStep === 0 ? stepGet() : necessaryStep);
-    };
-    const step = stepGet();
-    const firstNumb = () => {
-      const numb = randomNumb(100);
-      const numLimit = numb + (step * lastInd);
-      if (numLimit > 100) { return firstNumb(); }
-      return numb;
-    };
-    const startNumb = firstNumb();
-    for (let i = 0, numbNext = startNumb; i < 10; i += 1, numbNext += step) {
-      sequence.push(numbNext);
-    }
-    const indexRand = randomNumb(lastInd);
-    const replaceNum = sequence[indexRand];
-    let result = replaceNum;
-    sequence[indexRand] = '..';
-    const quest = sequence.join(' ');
 
-    result = result.toString();
+  const progrTask = () => {
+    const arrLength = 8;
+    const misNumPosition = randomNumb(7);
+    const firstNum = randomNumb(20);
+    const increment = randomNumb(19) + 1;
+    let quest = [firstNum];
+
+    for (let i = 1; i < arrLength; i += 1) {
+      quest.push(firstNum + increment * i);
+    }
+    let result = quest[misNumPosition];
+    quest[misNumPosition] = '..';
+
+    quest = quest.join(' ');
+    result = String(result);
 
     return ([quest, result]);
   };
