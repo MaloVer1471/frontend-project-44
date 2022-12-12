@@ -1,6 +1,6 @@
-const randomNubm = (max) => {
+const randomNumb = (max) => {
   const randomN = Math.floor(Math.random() * max);
   return (randomN);
 };
 
-export default randomNubm;
+export default randomNumb;

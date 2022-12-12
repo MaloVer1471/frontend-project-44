@@ -5,23 +5,21 @@ const prime = () => {
   const primeNote = 'Answer "yes" if given number is prime. Otherwise answer "no".';
   const primeTask = () => {
     const numb = randomNumb(100);
-
-    const primeNum = (num) => {
-      if (num < 2) { return false; }
-
-      let i = 2;
-      while (i <= num / 2) {
-        if (num % i === 0) { return false; }
-        i += 1;
+    const isPrimeNum = (num) => {
+      let divisorCount = 0;
+      const halfOfNum = Math.round(num / 2);
+      for (let i = 1; i <= halfOfNum; i += 1) {
+        if (num % i === 0) {
+          divisorCount += 1;
+        }
+        if (divisorCount > 1) {
+          return ('no');
+        }
       }
-
-      return true;
+      return ('yes');
     };
-    const quest = `${numb}`;
-
-    const result = (primeNum(numb) ? 'yes' : 'no');
-
-    return ([quest, result]);
+    const result = isPrimeNum(numb);
+    return ([numb, result]);
   };
   gameBase(primeNote, primeTask);
 };

@@ -3,7 +3,6 @@ import gameBase from '../gameComparison.js';
 
 const progressGame = () => {
   const progressNote = 'What number is missing in the progression?';
-
   const progrTask = () => {
     const sequence = [];
     const lastInd = 9;
@@ -19,7 +18,6 @@ const progressGame = () => {
       return numb;
     };
     const startNumb = firstNumb();
-
     for (let i = 0, numbNext = startNumb; i < 10; i += 1, numbNext += step) {
       sequence.push(numbNext);
     }
