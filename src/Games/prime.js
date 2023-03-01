@@ -1,10 +1,10 @@
-import gameBase from '../gameComparison.js';
-import randomNumb from '../randomNumb.js';
+import  runEngine from '../engine.js';
+import getRandomInRange from '../randomNumb.js';
 
-const prime = () => {
+const runPrime = () => {
   const primeNote = 'Answer "yes" if given number is prime. Otherwise answer "no".';
   const primeTask = () => {
-    const numb = randomNumb(100);
+    const numb = getRandomInRange(100);
     const isPrimeNum = (num) => {
       let divisorCount = 0;
       const halfOfNum = Math.round(num / 2);
@@ -21,7 +21,7 @@ const prime = () => {
     const result = isPrimeNum(numb);
     return ([numb, result]);
   };
-  gameBase(primeNote, primeTask);
+   runEngine(primeNote, primeTask);
 };
 
-export default prime;
+export default runPrime;

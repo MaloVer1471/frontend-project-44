@@ -1,11 +1,11 @@
-import gameBase from '../gameComparison.js';
-import randomNumb from '../randomNumb.js';
+import  runEngine from '../engine.js';
+import getRandomInRange from '../randomNumb.js';
 
-const evenGame = () => {
+const runEvenGame = () => {
   const gameNote = 'Answer "yes" if the number is even, otherwise answer "no".';
 
   const evenQuest = () => {
-    const numb = randomNumb(100);
+    const numb = getRandomInRange(100);
 
     const checkEven = (num) => num % 2 === 0;
 
@@ -16,7 +16,7 @@ const evenGame = () => {
     return ([questionNumb, result]);
   };
 
-  gameBase(gameNote, evenQuest);
+   runEngine(gameNote, evenQuest);
 };
 
-export default evenGame;
+export default runEvenGame;

@@ -1,14 +1,14 @@
-import randomNumb from '../randomNumb.js';
-import gameBase from '../gameComparison.js';
+import getRandomInRange from '../randomNumb.js';
+import  runEngine from '../engine.js';
 
-const progressGame = () => {
+const runProgressGame = () => {
   const progressNote = 'What number is missing in the progression?';
 
   const progrTask = () => {
     const arrLength = 8;
-    const misNumPosition = randomNumb(7);
-    const firstNum = randomNumb(20);
-    const increment = randomNumb(19) + 1;
+    const misNumPosition = getRandomInRange(7);
+    const firstNum = getRandomInRange(20);
+    const increment = getRandomInRange(19) + 1;
     let quest = [firstNum];
 
     for (let i = 1; i < arrLength; i += 1) {
@@ -22,7 +22,7 @@ const progressGame = () => {
 
     return ([quest, result]);
   };
-  gameBase(progressNote, progrTask);
+   runEngine(progressNote, progrTask);
 };
 
-export default progressGame;
+export default runProgressGame;

@@ -1,30 +1,30 @@
-import gameBase from '../gameComparison.js';
-import randomNumb from '../randomNumb.js';
+import  runEngine from '../engine.js';
+import getRandomInRange from '../randomNumb.js';
 
-const gcd = () => {
-  const gcdNote = 'Find the greatest common divisor of given numbers.';
+const runGCD = () => {
+  const GCDNote = 'Find the greatest common divisor of given numbers.';
 
-  const gcdTask = () => {
-    const num1 = randomNumb(100);
-    const num2 = randomNumb(100);
+  const GCDTask = () => {
+    const num1 = getRandomInRange(100);
+    const num2 = getRandomInRange(100);
 
     const quest = `${num1} ${num2}`;
 
-    const getGcd = (numb1, numb2) => {
+    const getrunGCD = (numb1, numb2) => {
       if (numb2 === 0) {
         return numb1;
       }
-      return getGcd(numb2, numb1 % numb2);
+      return getrunGCD(numb2, numb1 % numb2);
     };
 
-    let result = getGcd(num1, num2);
+    let result = getrunGCD(num1, num2);
 
     result = String(result);
 
     return ([quest, result]);
   };
 
-  gameBase(gcdNote, gcdTask);
+   runEngine(GCDNote, GCDTask);
 };
 
-export default gcd;
+export default runGCD;

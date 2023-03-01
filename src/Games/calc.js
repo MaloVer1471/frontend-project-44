@@ -1,15 +1,15 @@
-import gameBase from '../gameComparison.js';
-import randomNumb from '../randomNumb.js';
+import  runEngine from '../engine.js';
+import getRandomInRange from '../randomNumb.js';
 
-const calc = () => {
+const runCalc = () => {
   const calcNote = 'What is the result of the expression?';
 
   const calcTask = () => {
-    const num1 = randomNumb(100);
-    const num2 = randomNumb(100);
+    const num1 = getRandomInRange(100);
+    const num2 = getRandomInRange(100);
 
     const signs = ['+', '-', '*'];
-    const sing = signs[randomNumb(2)];
+    const sing = signs[getRandomInRange(2)];
 
     const quest = `${num1} ${sing} ${num2}`;
 
@@ -33,7 +33,7 @@ const calc = () => {
     return ([quest, result]);
   };
 
-  gameBase(calcNote, calcTask);
+   runEngine(calcNote, calcTask);
 };
 
-export default calc;
+export default runCalc;
