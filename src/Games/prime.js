@@ -5,6 +5,9 @@ const isPrimeNum = (num) => {
   let divisorCount = 0;
   const halfOfNum = Math.round(num / 2);
   for (let i = 1; i <= halfOfNum; i += 1) {
+    if (num === 1) {
+      return ('no');
+    }
     if (num % i === 0) {
       divisorCount += 1;
     }
