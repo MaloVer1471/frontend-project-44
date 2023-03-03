@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 
-const  runEngine = (rules, makeRound) => {
+const runEngine = (rules, makeRound) => {
   console.log('Welcome to the Brain Games!');
 
   const findUserName = readlineSync.question('May I have your name? ');
@@ -10,17 +10,16 @@ const  runEngine = (rules, makeRound) => {
   const roundsCount = 3;
 
   for (let i = 0; i < roundsCount; i += 1) {
-    const [question, answer] = makeRound()
+    const [question, answer] = makeRound();
 
-    console.log(`Question: ${questionAndResult[0]}`);
-    const userAnswer = readlineSync.question('Your answer: ');
+    console.log(`Question: ${question}`);
+    let userAnswer = readlineSync.question('Your answer: ');
+    userAnswer = Number.isNaN(+userAnswer) ? userAnswer : +userAnswer;
 
-    const rightAnswer = questionAndResult[1];
-
-    if (userAnswer === rightAnswer) {
+    if (userAnswer === answer) {
       console.log('Correct!');
     } else {
-      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}'. \nLet's try again, ${findUserName}!`);
+      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${answer}'. \nLet's try again, ${findUserName}!`);
       return;
     }
   }
@@ -28,4 +27,4 @@ const  runEngine = (rules, makeRound) => {
   console.log(`Congratulations, ${findUserName}!`);
 };
 
-export default  runEngine;
+export default runEngine;

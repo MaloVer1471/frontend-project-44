@@ -4,6 +4,11 @@
 <h2><b>Description</b></h2>
 <p><i>Brain Games</i> is a set of five console mini-games based on the popular mobile brain-pumping apps.Each game asks questions that need to be answered correctly. After three correct answers the game is considered completed. Wrong answers end the game and prompt you to play again.</p>
 
+<h2><b>Install Games</b></h2>
+<li><b>git clone https://github.com/MaloVer1471/frontend-project-44.git</b>. Installing the repository with the game.</li>
+<li><b>install</b>. Installation of additional components for the game.</li>
+<li><b>brain-games</b>. To select a game, enter a command from 'Game list'</li>
+
 <h2><b>Game list</b></h2>
 <ol>
   <li><b>brain-even</b>. Determining an even number.</li>
@@ -16,21 +21,21 @@
   <h2><b>Overviews</b></h2>
   <h3><b>brain-even</b></h3>
 
-[![asciicast](https://asciinema.org/a/6Tp4xnNVZcJckoXArL8D4b3fM.svg)](https://asciinema.org/a/6Tp4xnNVZcJckoXArL8D4b3fM)
+[![asciicast](https://asciinema.org/a/RIeUe8v4wZL30sdiCJz9BN7p7.svg)](https://asciinema.org/a/RIeUe8v4wZL30sdiCJz9BN7p7)
 
 <h3><b>brain-calc</b></h3>
 
-[![asciicast](https://asciinema.org/a/DcKsv0xWnQjcdIn386hxNM3b8.svg)](https://asciinema.org/a/DcKsv0xWnQjcdIn386hxNM3b8)
+[![asciicast](https://asciinema.org/a/79P3CAfgXzoauC5THx7setObs.svg)](https://asciinema.org/a/79P3CAfgXzoauC5THx7setObs)
 
  <h3><b>brain-gcd</b></h3>
 
-[![asciicast](https://asciinema.org/a/kPeyGJzqtTAguoDoZPMwt6dPn.svg)](https://asciinema.org/a/kPeyGJzqtTAguoDoZPMwt6dPn)
+[![asciicast](https://asciinema.org/a/hDGjsQS5coXgxiUiWBGHPgJK9.svg)](https://asciinema.org/a/hDGjsQS5coXgxiUiWBGHPgJK9)
 
  <h3><b>brain-progression</b></h3>
 
-[![asciicast](https://asciinema.org/a/8EcEtSgkJh5KeWzrsOkeO1nLL.svg)](https://asciinema.org/a/8EcEtSgkJh5KeWzrsOkeO1nLL)
+[![asciicast](https://asciinema.org/a/991sXet8idkU1WCsPA07wNYgi.svg)](https://asciinema.org/a/991sXet8idkU1WCsPA07wNYgi)
 
 <h3><b>brain-prime</b></h3>
 
-[![asciicast](https://asciinema.org/a/n7CD57cHIwKssyYleUNPl7vW5.svg)](https://asciinema.org/a/n7CD57cHIwKssyYleUNPl7vW5)
+[![asciicast](https://asciinema.org/a/1TlJvQ9RTbEpRoazATTpIi9IR.svg)](https://asciinema.org/a/1TlJvQ9RTbEpRoazATTpIi9IR)
 </div>

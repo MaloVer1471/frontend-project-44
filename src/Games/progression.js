@@ -1,28 +1,35 @@
-import getRandomInRange from '../randomNumb.js';
-import  runEngine from '../engine.js';
+import getRandomNum from '../randomNumb.js';
+import runEngine from '../engine.js';
+
+const buildProgress = (quest, firstNum) => {
+  const arrLength = 8;
+  const increment = getRandomNum(1, 19) + 1;
+  let progressResult = 0;
+  for (let i = 1; i < arrLength; i += 1) {
+    progressResult = firstNum + increment * i;
+    quest.push(progressResult);
+  }
+  return quest;
+};
+
+const progrTask = () => {
+  const misNumPosition = getRandomNum(0, 7);
+  const firstNum = getRandomNum(1, 20);
+  let quest = [firstNum];
+
+  buildProgress(quest, firstNum);
+  let result = quest[misNumPosition];
+  quest[misNumPosition] = '..';
+
+  quest = quest.join(' ');
+  return ([quest, result]);
+};
 
 const runProgressGame = () => {
   const progressNote = 'What number is missing in the progression?';
 
-  const progrTask = () => {
-    const arrLength = 8;
-    const misNumPosition = getRandomInRange(7);
-    const firstNum = getRandomInRange(20);
-    const increment = getRandomInRange(19) + 1;
-    let quest = [firstNum];
-
-    for (let i = 1; i < arrLength; i += 1) {
-      quest.push(firstNum + increment * i);
-    }
-    let result = quest[misNumPosition];
-    quest[misNumPosition] = '..';
-
-    quest = quest.join(' ');
-    result = String(result);
-
-    return ([quest, result]);
-  };
-   runEngine(progressNote, progrTask);
+  progrTask();
+  runEngine(progressNote, progrTask);
 };
 
 export default runProgressGame;

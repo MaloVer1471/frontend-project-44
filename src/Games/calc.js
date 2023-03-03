@@ -1,39 +1,27 @@
-import  runEngine from '../engine.js';
-import getRandomInRange from '../randomNumb.js';
+import runEngine from '../engine.js';
+import getRandomNum from '../randomNumb.js';
+
+const calculation = (num1, num2, operator) => { switch (operator) { case '+': return num1 + num2; case '-': return num1 - num2; case '*': return num1 * num2; default: return null; } };
+
+const calcTask = () => {
+  const num1 = getRandomNum(1, 100);
+  const num2 = getRandomNum(1, 100);
+
+  const signs = ['+', '-', '*'];
+  const operator = signs[getRandomNum(0, 2)];
+
+  const quest = `${num1} ${operator} ${num2}`;
+
+  const result = calculation(num1, num2, operator);
+  return ([quest, result]);
+};
 
 const runCalc = () => {
   const calcNote = 'What is the result of the expression?';
 
-  const calcTask = () => {
-    const num1 = getRandomInRange(100);
-    const num2 = getRandomInRange(100);
+  calcTask();
 
-    const signs = ['+', '-', '*'];
-    const sing = signs[getRandomInRange(2)];
-
-    const quest = `${num1} ${sing} ${num2}`;
-
-    let result = 0;
-    switch (sing) {
-      case '+':
-        result = num1 + num2;
-        break;
-      case '-':
-        result = num1 - num2;
-        break;
-      case '*':
-        result = num1 * num2;
-        break;
-      default:
-        result = null;
-    }
-
-    result = result.toString();
-
-    return ([quest, result]);
-  };
-
-   runEngine(calcNote, calcTask);
+  runEngine(calcNote, calcTask);
 };
 
 export default runCalc;
