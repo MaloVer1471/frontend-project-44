@@ -14,7 +14,7 @@ const GCDTask = () => {
 
   const quest = `${num1} ${num2}`;
 
-  let result = getrunGCD(num1, num2);
+  const result = getrunGCD(num1, num2);
   return ([quest, result]);
 };
 

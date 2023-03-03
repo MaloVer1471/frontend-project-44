@@ -18,7 +18,7 @@ const progrTask = () => {
   let quest = [firstNum];
 
   buildProgress(quest, firstNum);
-  let result = quest[misNumPosition];
+  const result = quest[misNumPosition];
   quest[misNumPosition] = '..';
 
   quest = quest.join(' ');
